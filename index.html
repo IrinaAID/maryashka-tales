@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сказки мышки Марьяшки</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&family=Pacifico&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #fdfaf5; /* Светлый, кремовый тон */
+            font-family: 'Nunito', sans-serif;
+            color: #5a4a42;
+        }
+        .header-font { font-family: 'Pacifico', cursive; }
+        .mouse-card {
+            background: white;
+            border-radius: 20px;
+            transition: transform 0.2s;
+            border: 1px solid #eee5d8;
+        }
+        .mouse-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(90, 74, 66, 0.05);
+        }
+        .nav-link {
+            color: #8d776a;
+            font-weight: 600;
+            transition: color 0.2s;
+        }
+        .nav-link:hover { color: #d4a373; }
+    </style>
+</head>
+<body>
+
+    <header class="text-center py-12 px-4">
+        <h1 class="text-4xl md:text-5xl header-font text-[#6b584e] mb-8">Сказки мышки Марьяшки</h1>
+        
+        <div class="relative inline-block">
+            <div class="w-48 h-48 md:w-56 md:h-56 rounded-full border-8 border-white shadow-lg overflow-hidden mx-auto">
+                <img src="mouse.png" alt="Мышка Марьяшка" class="w-full h-full object-cover">
+            </div>
+        </div>
+
+        <nav class="flex flex-wrap justify-center gap-6 mt-10 text-lg">
+            <a href="#tales" class="nav-link"># Сказки</a>
+            <a href="#video" class="nav-link"># Видео</a>
+            <a href="#tasks" class="nav-link"># Задачки</a>
+        </nav>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-6 pb-20">
+        
+        <section id="tales" class="mb-16">
+            <div class="flex items-center gap-3 mb-8 border-b border-[#eee5d8] pb-2">
+                <span class="text-2xl">📖</span>
+                <h2 class="text-2xl font-bold">Сказки</h2>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+                <div class="mouse-card p-4">
+                    <div class="aspect-video bg-gray-100 rounded-lg mb-4 overflow-hidden">
+                        <img src="https://via.placeholder.com/300x200?text=Сказка+1" alt="Обложка" class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="font-bold text-sm mb-1">Марьяшка в лесу</h3>
+                    <p class="text-xs text-gray-500">Приключение о том, как мышка искала орешки.</p>
+                </div>
+                </div>
+        </section>
+
+        <section id="video" class="mb-16">
+            <div class="flex items-center gap-3 mb-8 border-b border-[#eee5d8] pb-2">
+                <span class="text-2xl">🎬</span>
+                <h2 class="text-2xl font-bold">Видео</h2>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+                <div class="mouse-card p-4">
+                    <div class="aspect-video bg-[#333] rounded-lg mb-4 flex items-center justify-center text-white">
+                        <span>▶️</span>
+                    </div>
+                    <h3 class="font-bold text-sm">Песенка Марьяшки</h3>
+                </div>
+                </div>
+        </section>
+
+        <section id="tasks" class="mb-16">
+            <div class="flex items-center gap-3 mb-8 border-b border-[#eee5d8] pb-2">
+                <span class="text-2xl">✏️</span>
+                <h2 class="text-2xl font-bold">Задачки</h2>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+                <div class="mouse-card p-6 text-center">
+                    <div class="text-4xl mb-3">🧩</div>
+                    <h3 class="font-bold mb-2">Найди 5 отличий</h3>
+                    <button class="text-xs bg-[#d4a373] text-white px-4 py-1 rounded-full">Играть</button>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="text-center py-10 border-t border-[#eee5d8]">
+        <p class="header-font text-xl">С любовью от мышки Марьяшки ❤️</p>
+    </footer>
+
+</body>
+</html>
