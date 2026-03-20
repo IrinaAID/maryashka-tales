@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Все детективы — Мышка Марьяшка</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;800&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Nunito', sans-serif;
+      background: linear-gradient(to bottom, #fffaf5, #fef3f2);
+    }
+  </style>
+</head>
+<body class="text-gray-800">
+
+  <header class="max-w-7xl mx-auto px-6 py-8">
+    <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+      <h1 class="text-4xl font-extrabold text-pink-700">Все детективы Марьяшки</h1>
+
+      <a href="index.html"
+         class="inline-block bg-white border border-pink-300 text-pink-700 px-5 py-2 rounded-full font-semibold hover:bg-pink-50 transition">
+        ← На главную
+      </a>
+    </div>
+
+    <p class="mt-4 text-lg text-gray-600">
+      Здесь собраны все истории. Страницу можно легко расширять — просто добавляй новые карточки в список.
+    </p>
+  </header>
+
+  <main class="max-w-7xl mx-auto px-6 pb-12">
+    <div id="detectivesGrid" class="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"></div>
+  </main>
+
+  <script>
+    const detectives = [
+      {
+        title: "Дело 1. Хрустальные часы времени",
+        image: "images/detective1.jpg",
+        link: "https://youtube.com/your-link-1",
+        description: "Первая тайна Марьяшки и её друзей."
+      },
+      {
+        title: "Дело 2. Пропавший компас",
+        image: "images/detective2.jpg",
+        link: "https://youtube.com/your-link-2",
+        description: "Таинственное исчезновение компаса Бориса."
+      },
+      {
+        title: "Дело 3. Исчезнувшее эхо",
+        image: "images/detective3.jpg",
+        link: "https://youtube.com/your-link-3",
+        description: "Почему лес вдруг перестал отвечать?"
+      },
+      {
+        title: "Дело 4. Тайна ночного колокольчика",
+        image: "images/detective4.jpg",
+        link: "https://youtube.com/your-link-4",
+        description: "Лунная нить оборвана, а колокольчик исчез."
+      },
+      {
+        title: "Дело 5",
+        image: "images/detective5.jpg",
+        link: "#",
+        description: "Описание детектива."
+      },
+      {
+        title: "Дело 6",
+        image: "images/detective6.jpg",
+        link: "#",
+        description: "Описание детектива."
+      }
+      // сюда потом добавляешь остальные до 20
+    ];
+
+    const grid = document.getElementById("detectivesGrid");
+
+    detectives.forEach(item => {
+      const card = document.createElement("a");
+      card.href = item.link;
+      card.target = "_blank";
+      card.className = "group bg-white rounded-3xl overflow-hidden shadow-md hover:shadow-xl transition transform hover:-translate-y-1";
+
+      card.innerHTML = `
+        <div class="overflow-hidden">
+          <img src="${item.image}" alt="${item.title}" class="w-full h-60 object-cover group-hover:scale-105 transition duration-300">
+        </div>
+        <div class="p-5">
+          <h2 class="text-xl font-bold text-pink-700 mb-2">${item.title}</h2>
+          <p class="text-gray-600 text-sm">${item.description}</p>
+        </div>
+      `;
+
+      grid.appendChild(card);
+    });
+  </script>
+
+</body>
+</html>
